@@ -10,11 +10,19 @@
     <div class="container">
       <h1>Permainan Tebak Angka</h1>
       <p>Masukan angka antara 1 hingga 100:</p>
-      <input type="number" id="guessInput" placeholder="Tebakan kamu..." />
-      <button onclick="checkGuess()">Tebak</button>
+      <p>Kamu hanya punya 10 kali percobaan!</p>
+
+      <input
+        type="number"
+        id="guessInput"
+        placeholder="Tebakan kamu..."
+        min="1"
+      />
+      <button id="submitBtn">Tebak</button>
       <p id="message"></p>
+      <p id="attempts">Percobaan: 0 / 10</p>
       <p id="history"></p>
-      <button onclick="resetGame()">Reset</button>
+      <button id="resetBtn" style="display: none">Reset</button>
     </div>
 
     <script src="script.js"></script>
